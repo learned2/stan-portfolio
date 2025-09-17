@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stan Usovicz - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <audio id="bg-music" src="data/music.mp3" preload="auto" autoplay loop playsinline></audio>
+    
+    <div class="container">
+        <div class="header">
+            <div class="profile-photo">
+                <img src="data/headshot.PNG" alt="Stan Usovicz">
+            </div>
+            <h1 class="name">Stan Usovicz</h1>
+            <p class="tagline">Data Analytics • Web Development • Business Operations</p>
+            <div class="contact-info">
+                <a href="mailto:susovicz@gmail.com">susovicz@gmail.com</a> • <a href="https://github.com/learned2" target="_blank" rel="noopener noreferrer">github.com/learned2</a>
+            </div>
+        </div>
+
+        <div class="main-tabs">
+            <div class="tab active" onclick="showTab('home')">Home</div>
+            <div class="tab" onclick="showTab('portfolio')">Portfolio</div>
+            <div class="tab" onclick="showTab('resume')">Resume</div>
+        </div>
+
+        <div id="portfolio" class="tab-content">
+            <div class="filter-tags">
+                <div class="filter-tag active" onclick="filterProjects('all')">All</div>
+                <div class="filter-tag" onclick="filterProjects('data-analysis')">Data Analysis</div>
+                <div class="filter-tag" onclick="filterProjects('web-development')">Web Development</div>
+                <div class="filter-tag" onclick="filterProjects('business')">Business</div>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Data Analysis Projects -->
+                <div class="card data-analysis show">
+                    <div class="card-tags">
+                        <span class="card-tag">Data Analysis</span>
+                        <span class="card-tag">Python</span>
+                    </div>
+                    <h3 class="card-title">Data Analysis Project 1</h3>
+                    <p class="card-description">Description of your data analysis project. This could include details about the dataset, methodologies used, and key insights discovered.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/data-analysis-1.html">View Details</a>
+                </div>
+
+                <div class="card data-analysis show">
+                    <div class="card-tags">
+                        <span class="card-tag">Data Analysis</span>
+                        <span class="card-tag">SQL</span>
+                    </div>
+                    <h3 class="card-title">Data Analysis Project 2</h3>
+                    <p class="card-description">Description of another data analysis project. Highlight the tools used such as Python, SQL, Tableau, or Power BI.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/data-analysis-2.html">View Details</a>
+                </div>
+
+                <!-- Web Development Projects -->
+                <div class="card web-development show">
+                    <div class="card-tags">
+                        <span class="card-tag">Web Development</span>
+                        <span class="card-tag">JavaScript</span>
+                    </div>
+                    <h3 class="card-title">Website Project 1</h3>
+                    <p class="card-description">Description of your web development project. Include technologies used like HTML, CSS, JavaScript, and any frameworks.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/web-development-1.html">View Details</a>
+                </div>
+
+                <div class="card web-development show">
+                    <div class="card-tags">
+                        <span class="card-tag">Web Development</span>
+                        <span class="card-tag">React</span>
+                    </div>
+                    <h3 class="card-title">Web Application 2</h3>
+                    <p class="card-description">Another web development project showcasing your skills in creating dynamic, interactive web experiences.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/web-development-2.html">View Details</a>
+                </div>
+
+                <!-- Business Projects -->
+                <div class="card business show">
+                    <div class="card-tags">
+                        <span class="card-tag">Business</span>
+                        <span class="card-tag">Strategy</span>
+                    </div>
+                    <h3 class="card-title">Business Initiative 1</h3>
+                    <p class="card-description">Description of a business project or achievement. This could relate to your work at EsportScholar or other entrepreneurial ventures.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/business-1.html">View Details</a>
+                </div>
+
+                <div class="card business show">
+                    <div class="card-tags">
+                        <span class="card-tag">Business</span>
+                        <span class="card-tag">Operations</span>
+                    </div>
+                    <h3 class="card-title">Business Strategy 2</h3>
+                    <p class="card-description">Another business-related project showcasing your operational and strategic capabilities.</p>
+                    <p class="card-date">Date: 2024</p>
+                    <a class="cta" href="projects/business-2.html">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="resume" class="tab-content">
+            <div class="resume-section">
+                <h2 class="resume-header">Education</h2>
+                <div class="education-item">
+                    <div class="item-title">University of Massachusetts, Amherst</div>
+                    <div class="item-subtitle">MS Data Analytics & Computational Social Sciences</div>
+                    <div class="item-date">2025 - Present</div>
+                </div>
+                <div class="education-item">
+                    <div class="item-title">Columbia University</div>
+                    <div class="item-subtitle">Professional Certificate, Data Analytics & Visualization</div>
+                    <div class="item-date">2024 - 2025</div>
+                </div>
+                <div class="education-item">
+                    <div class="item-title">University of St. Andrews</div>
+                    <div class="item-subtitle">MA (Honours) International Relations, II.i</div>
+                    <div class="item-date">2012 - 2017</div>
+                </div>
+                <div class="education-item">
+                    <div class="item-title">St. John's Preparatory School</div>
+                    <div class="item-subtitle">3.9 GPA, Elected Class President (x4), D1 State Champion - Rugby (x3)</div>
+                    <div class="item-date">2008 - 2012</div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 class="resume-header">Experience</h2>
+                <div class="experience-item">
+                    <div class="item-title">EsportScholar LLC - Founder & Director</div>
+                    <div class="item-subtitle">Salem, MA</div>
+                    <div class="item-date">April 2021 - Present</div>
+                    <div class="item-description">
+                        EsportScholar is a STEM.org accredited, nationwide afterschool esports program that combines STEAM instruction, coaching, and competition.
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Orchestrated programming partnerships with schools, districts, and organizations across 7 states.</li>
+                            <li>Secured a $150,000 per annum, multi-year contract with the City of Cleveland, Ohio.</li>
+                            <li>Managed a team of 30 contractors and instructors, overseeing project execution and team performance.</li>
+                            <li>Developed a custom CRM system, website, and custom analytical tools to scale operations.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-title">Concorde Education - Director of Operations</div>
+                    <div class="item-subtitle">New York, NY</div>
+                    <div class="item-date">August 2019 - March 2021</div>
+                    <div class="item-description">
+                        Concorde Education (a Morningside Company) focuses on innovative educational programs for K-12 schools.
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>As an original founding member, generated $400,000+ in revenue within two years, expanding into 12 states.</li>
+                            <li>Launched over 40 projects at schools across the U.S., enhancing educational delivery through esports and tech-based learning.</li>
+                            <li>Directed the development of service programs in Game Development, Drone Coding, and Esports.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-title">Morningside Evaluations - Associate, Education</div>
+                    <div class="item-subtitle">New York, NY</div>
+                    <div class="item-date">January 2019 - March 2021</div>
+                    <div class="item-description">
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Collaborated with universities, professors and international tech companies to facilitate H-1B and O1 visa application processes.</li>
+                            <li>Contributed to the company's Salesforce, QuickBooks, and Conga implementations by identifying application errors and improving workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2 class="resume-header">Skills & Interests</h2>
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <div class="skill-title">Technical:</div>
+                        <div>CRM System Administration (Salesforce, Monday), Web Development (HTML, CSS, JavaScript), Data Analytics & Visualization (Advanced Excel, VBA, Python, SQL, Matplotlib, Power BI and Tableau).</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Language:</div>
+                        <div>Spanish - Full Professional Proficiency</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Interests:</div>
+                        <div>Soccer, Rugby, Traveling (40+ countries), Writing, Graphic Design and Custom PC Building.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
