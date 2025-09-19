@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Vegapunk';
-    src: url('../font/Vegapunk-FREE.otf') format('opentype');
+    font-family: 'Revista';
+    src: url('../font/REVISTA.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -49,7 +49,8 @@ body {
     border-radius: 50%;
     margin: 0 auto 2rem;
     border: 3px solid #00ffff;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2);
+    animation: pulseGlow 4s ease-in-out infinite;
 }
 
 .profile-photo img {
@@ -60,12 +61,12 @@ body {
 }
 
 .name {
-    font-family: 'Vegapunk', Arial, sans-serif;
+    font-family: 'Revista', Arial, sans-serif;
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    background: linear-gradient(45deg, #00ffff, #ff00ff, #4f1ff0);
+    background: linear-gradient(45deg, #00ffff, #0cace6, #105670);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -165,8 +166,10 @@ body {
     padding: 8px 16px;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    display: block;
-    margin: 0.75rem auto 0;
+    display: inline-block;
+    margin: 0.75rem 0 0;
+    text-align: center;
+    width: auto;
 }
 
 .cta:hover {
@@ -185,9 +188,9 @@ body {
 
 .filter-tag {
     padding: 8px 16px;
-    background: rgba(255, 0, 255, 0.1);
-    border: 1px solid #ff00ff;
-    color: #ff00ff;
+    background: rgba(12, 172, 230, 0.1);
+    border: 1px solid #0cace6;
+    color: #0cace6;
     cursor: pointer;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -196,8 +199,8 @@ body {
 }
 
 .filter-tag:hover, .filter-tag.active {
-    background: rgba(255, 0, 255, 0.2);
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    background: rgba(12, 172, 230, 0.2);
+    box-shadow: 0 0 15px rgba(12, 172, 230, 0.4);
 }
 
 .cards-grid {
@@ -208,11 +211,10 @@ body {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid rgba(0, 255, 255, 0.3);
     border-radius: 15px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
     display: none;
@@ -231,16 +233,16 @@ body {
 .card-tags {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .card-tag {
     padding: 4px 8px;
-    background: rgba(79, 31, 240, 0.15);
-    border: 1px solid #4f1ff0;
+    background: rgba(16, 86, 112, 0.15);
+    border: 1px solid #105670;
     border-radius: 10px;
     font-size: 0.8rem;
-    color: #4f1ff0;
+    color: #105670;
 }
 
 .card-title {
@@ -259,15 +261,14 @@ body {
 
 .card-date {
     font-size: 0.9rem;
-    color: #ff00ff;
+    color: #0cace6;
     font-weight: bold;
 }
 
 .resume-section {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.95);
     border-radius: 15px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 255, 255, 0.2);
     margin-bottom: 2rem;
 }
@@ -291,13 +292,13 @@ body {
 
 .item-title {
     font-size: 1.3rem;
-    color: #4f1ff0;
+    color: #105670;
     font-weight: bold;
 }
 
 .item-subtitle {
     font-size: 1.1rem;
-    color: #ff00ff;
+    color: #0cace6;
     margin-bottom: 0.5rem;
 }
 
@@ -340,6 +341,15 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1); 
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2); 
+    }
 }
 
 @media (max-width: 768px) {
